@@ -195,6 +195,10 @@ section{
     font-family: 'Merienda One', cursive;
 }
 
+.facility {
+    margin-top: 4rem;
+}
+
 .facility .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr)); 
