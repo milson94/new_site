@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Deliver Mozambique - Nossos Serviços</title>
+    
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+        /* Basic styling for the new services page content */
+        /* Assuming 'var(--light-bg)', 'var(--black)', 'var(--main-color)', 'var(--light-color)', 'var(--white)', 'var(--box-shadow)' are defined in style.css */
+        
+        .services-page {
+            padding-top: 10rem; /* Adjust based on header height */
+            padding-bottom: 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .services-page-content {
+            padding: 3rem 1rem;
+            background: var(--light-bg); 
+            border-radius: .5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+        }
+
+        .services-page-content .heading {
+            margin-bottom: 2rem;
+        }
+
+        .services-page-content .heading h3 {
+            font-size: 3rem;
+            color: var(--black); 
+            text-transform: uppercase;
+        }
+
+        .services-page-content .description-text {
+            font-size: 1.8rem;
+            color: var(--light-color);
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 3rem; /* Adjusted margin to separate from grid */
+            padding: 0 1rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            padding: 0 1rem; /* Add padding for smaller screens */
+        }
+
+        .service-item {
+            background: var(--white); 
+            padding: 2rem;
+            border-radius: .5rem;
+            box-shadow: var(--box-shadow);
+            text-align: left; /* Align text within service boxes to left */
+            display: flex; /* Use flexbox for icon and text alignment */
+            flex-direction: column; /* Stack content vertically */
+            align-items: center; /* Center content horizontally */
+        }
+
+        .service-item i {
+            font-size: 4rem;
+            color: var(--main-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-item h4 {
+            font-size: 2.2rem; /* Slightly larger heading for service item */
+            color: var(--black);
+            margin-bottom: 1rem;
+            text-align: center; /* Center heading within service boxes */
+            text-transform: capitalize; /* Ensure consistency */
+        }
+
+        .service-item p {
+            font-size: 1.6rem;
+            color: var(--light-color);
+            line-height: 1.7;
+            margin: 0;
+            text-align: justify; /* Justify paragraph text */
+        }
+
+        .back-to-home-section {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .back-to-home-section .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            background: var(--main-color);
+            color: var(--white);
+            font-size: 1.8rem;
+            padding: 1rem 3rem;
+            border-radius: .5rem;
+            text-transform: capitalize;
+            transition: .2s linear;
+        }
+
+        .back-to-home-section .btn:hover {
+            letter-spacing: .1rem;
+            background: var(--black);
+        }
+
+        /* Responsive adjustments for services page */
+        @media (max-width: 991px) {
+            .services-page {
+                padding-top: 7rem;
+                padding-bottom: 3rem;
+            }
+            .services-page-content .heading h3 {
+                font-size: 2.8rem;
+            }
+            .services-page-content .description-text {
+                font-size: 1.7rem;
+            }
+            .service-item h4 {
+                font-size: 2rem;
+            }
+            .service-item p {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-page-content .heading h3 {
+                font-size: 2.5rem;
+            }
+            .services-page-content .description-text {
+                font-size: 1.6rem;
+            }
+            .service-grid {
+                grid-template-columns: 1fr; /* Stack services on small screens */
+            }
+            .service-item {
+                padding: 1.5rem;
+            }
+            .service-item i {
+                font-size: 3.5rem;
+            }
+            .service-item h4 {
+                font-size: 1.9rem;
+            }
+            .service-item p {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .services-page-content .heading h3 {
+                font-size: 2rem;
+            }
+            .services-page-content .description-text {
+                font-size: 1.5rem;
+            }
+            .service-item h4 {
+                font-size: 1.8rem;
+            }
+            .service-item p {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- header section starts -->
+
+    <header class="header">
+        
+        <section class="flex">
+            <a href="index.html" class="logo"><img src="images/abcdeliver.png" alt=""></a>
+
+            <nav class="navbar">
+                <a href="index.html#home">Início</a>
+                <a href="index.html#about">Sobre nós</a>
+                <a href="index.html#menu">Nossos Serviços</a>
+                <a href="index.html#gallery">Mais Info</a>
+                <a href="index.html#team">Equipe</a>
+                <a href="index.html#contact">contacto</a>
+            </nav>
+
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
+    </header>
+    <!-- header section ends  -->
+
+    <!-- Main Services Page Content Starts -->
+    <main class="services-page">
+        <section class="services-page-content">
+            <div class="heading">
+                <h3>Nossos Serviços</h3>
+            </div>
+            <p class="description-text">
+                Na ABC Deliver Moçambique, comprometemo-nos a simplificar a sua vida e a otimizar a sua produtividade. Oferecemos uma gama abrangente de serviços de estafetagem e apoio administrativo, projetados para atender às necessidades de indivíduos e empresas em todo o país. Com eficiência, segurança e rapidez, somos o seu parceiro de confiança para todas as suas necessidades de entrega e burocracia.
+            </p>
+
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fas fa-file-alt"></i>
+                    <h4>Entrega de Documentos</h4>
+                    <p>Transporte seguro e confidencial de todo o tipo de documentos, incluindo contratos, propostas, relatórios, correspondência oficial e pessoal. Garantimos que seus documentos cheguem ao destino intactos e dentro do prazo.</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="fas fa-box-open"></i>
+                    <h4>Transporte de Encomendas</h4>
+                    <p>Serviço de recolha e entrega de pequenas e médias encomendas, ideal para compras online, presentes, produtos comerciais e qualquer outro artigo que necessite de ser transportado com cuidado e agilidade.</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="fas fa-money-check-alt"></i>
+                    <h4>Pagamentos e Depósitos Bancários</h4>
+                    <p>Realizamos pagamentos de contas, impostos e taxas diversas em instituições públicas e privadas. Efetuamos também depósitos e levantamentos de cheques e outros valores em bancos, poupando-lhe tempo e deslocações.</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Serviços Corporativos Personalizados</h4>
+                    <p>Apoio logístico e administrativo para empresas, incluindo recolha e entrega de material de escritório, distribuição interna de documentos, e outras tarefas que otimizem as operações diárias do seu negócio.</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="fas fa-passport"></i>
+                    <h4>Tratamento de Vistos e Burocracia</h4>
+                    <p>Assistência completa no tratamento de processos burocráticos, como a recolha e entrega de documentos para vistos, passaportes, cartões de identificação, e outras certidões junto às entidades competentes.</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="fas fa-truck-fast"></i>
+                    <h4>Entregas Urgentes e Expressas</h4>
+                    <p>Para aquelas situações que exigem máxima rapidez, oferecemos um serviço de entrega urgente. Os seus itens são priorizados e entregues no menor tempo possível, sem comprometer a segurança e a integridade.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="back-to-home-section">
+            <a href="index.html" class="btn">Voltar à Página Inicial</a>
+        </section>
+    </main>
+    <!-- Main Services Page Content Ends -->
+
+    <!-- footer section starts -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <p>mangueleedmilson@gmail.com</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-phone"></i>
+                <p>+258 84 42 78012 / +258 86 860 5697</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-clock"></i>
+                <p>07:00 AM to 09:00 PM</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Av. Vladimir Lenine  N<sup>o</sup> . 2334 </p>
+                
+            </div>
+        </div>
+
+
+        <div class="credit"> © Copyright@2022 por <span>abc designers</span> || Todos direitos reservados  </div>
+    </section>
+    <!-- footer section ends -->
+
+
+    <hr>
+    
+
+    
+
+    <script src="js/app.js"></script>
+</body>
+</html>
